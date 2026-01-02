@@ -9,7 +9,7 @@ export const push = async (payload: {
     type: string;
     metadata: string;
     tokens: string[];
-    link?: string
+    link?: string;
 }): Promise<void> => {
     try {
         const app = getApps().length
@@ -27,8 +27,8 @@ export const push = async (payload: {
                         title: payload.title,
                         body: payload.body.substring(0, 200),
                         type: payload.type,
-                        icon:  env.logo ?? "https://swiftswapexchange.com/logo.png",
-                        link: payload.link || "https://swiftswapexchange.com",
+                        icon: env.logo ?? 'https://typescript-rest-api-templateexchange.com/logo.png',
+                        link: payload.link || 'https://typescript-rest-api-templateexchange.com',
                         metadata: payload.metadata,
                     },
                     tokens: payload.tokens.slice(i, i + 500),
@@ -61,10 +61,10 @@ export const push = async (payload: {
                         },
                     },
                     webpush: {
-                        headers:{
-                            Urgency: "high",
+                        headers: {
+                            Urgency: 'high',
                         },
-                    }
+                    },
                 });
                 logger.info(`[fcm] - [${JSON.stringify(response)}]`);
             }

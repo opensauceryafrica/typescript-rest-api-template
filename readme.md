@@ -1,6 +1,6 @@
-# swiftswap.backend
+# typescript-rest-api-template
 
-swiftswap exchange backend
+typescript-rest-api-template exchange backend
 
 ## Running
 
